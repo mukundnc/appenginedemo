@@ -1,0 +1,11 @@
+#project: testapp
+
+dispatch:
+# Default module serves the typical web resources and all static resources.
+- url: "*/v1/*"
+  service: default
+
+# Send all api traffic to the webservice backend.
+- url: "*/api/*"
+  service: service
+

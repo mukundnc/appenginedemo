@@ -1,0 +1,13 @@
+#project: testapp
+service: service
+#version: uno
+runtime: python27
+api_version: 1
+threadsafe: true
+instance_class: B2
+manual_scaling:
+  instances: 1
+
+handlers:
+ - url: /.*
+   script: server.handler.app
